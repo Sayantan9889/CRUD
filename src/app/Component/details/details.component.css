@@ -1,0 +1,34 @@
+.card {
+    height: auto;
+}
+
+.card .headTxt {
+    background-color: rgb(201, 201, 201);
+    height: 10vh;
+}
+
+.card .headTxt h3{
+    text-align: center;
+    margin-top: 1%;
+}
+
+.card-body {
+    background-color: rgb(237, 237, 237);
+}
+
+.card-body button {
+    background-color: rgb(91, 110, 110);
+    color: rgb(255, 255, 255);
+    font-size: 1.5vw;
+    border-radius: 10px;
+    border-width: 0px;
+    height: 7vh;
+    width: 8vw;
+}
+.card-body #editBtn {
+   margin-left: 35%;
+}
+.card-body #dltBtn {
+   margin-right: 35%;
+   float: right;
+}

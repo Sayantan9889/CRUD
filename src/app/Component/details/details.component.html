@@ -1,0 +1,20 @@
+<main>
+    <section class="container py-4">
+        <!-- <ng-container *ngFor="let i of singleItem"> -->  <!-- singleItem is an Object. Thats why ngFor will not work. -->
+            <div class="card">
+                <div class="headTxt">
+                    <h3>{{singleItem?.item_name}}</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Company: {{singleItem?.company}}</p>
+                    <p class="card-title">Description: {{singleItem?.desc}}</p>
+                    <p class="card-title">Price: Rs.{{singleItem?.price}}</p>
+                    <!-- Don't need to send {{singleItem?.price}} for edit button.
+                    Because it's path already have that id from previous path of DetailsComponent. -->
+                    <a routerLink="edit" id="editBtn"><button>Edit [U]</button></a>
+                    <button id="dltBtn" (click)="delItem()">Delete [D]</button>
+                </div>
+            </div>
+        <!-- </ng-container> -->
+    </section>
+</main>

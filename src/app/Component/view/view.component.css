@@ -1,0 +1,45 @@
+.searchField {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(202, 202, 202);
+    margin-bottom: 1%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.searchField #sText {
+    width: 50%;
+    height: 38px;
+}
+.searchField .btn {
+    width: 10%;
+    margin-top: 8px;
+}
+
+.card {
+    background: linear-gradient(to bottom left, rgb(201, 201, 201), rgb(244, 244, 244), rgb(202, 202, 202));
+    box-shadow: 1px 1px 10px 5px rgb(181, 181, 181);
+}
+
+button {
+    width: 30%;
+    height: 35px;
+    margin: 1% 3%;
+    background-color: rgb(228, 237, 255);
+    border: 0px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: rgb(141, 180, 253);
+}
+
+
+.ntFnd {
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    justify-content: center;
+}
+.ntFnd h1 {
+    color: red;
+}

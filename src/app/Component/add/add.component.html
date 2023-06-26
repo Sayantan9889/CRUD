@@ -1,0 +1,39 @@
+<main>
+    <section class="container py-4">
+        <div class="addForm">
+            <form [formGroup]="itemDetails" (ngSubmit)="newItem()">
+                <h3 id="headTxt">Fill the form to add new item</h3>
+                <div class="inputField">
+                    <label for="item_name">Item name</label>
+                    <input type="text" formControlName="item_name" id="item_name">
+                    <ng-container *ngIf="itemDetails.get('item_name')?.touched">
+                        <ng-container *ngIf="itemDetails.get('item_name')?.hasError('required')"><p class="error">* Required field</p></ng-container>
+                    </ng-container>
+                </div>
+                <div class="inputField">
+                    <label for="company">Company</label>
+                    <input type="text" formControlName="company" id="company">
+                    <ng-container *ngIf="itemDetails.get('company')?.touched">
+                        <ng-container *ngIf="itemDetails.get('company')?.hasError('required')"><p class="error">* Required field</p></ng-container>
+                    </ng-container>
+                </div>
+                <div class="inputField">
+                    <label for="desc">Description</label>
+                    <input type="text" formControlName="desc" id="desc">
+                    <ng-container *ngIf="itemDetails.get('desc')?.touched">
+                        <ng-container *ngIf="itemDetails.get('desc')?.hasError('required')"><p class="error">* Required field</p></ng-container>
+                    </ng-container>
+                </div>
+                <div class="inputField">
+                    <label for="price">Price</label>
+                    <input type="text" formControlName="price" id="price">
+                    <ng-container *ngIf="itemDetails.get('price')?.touched">
+                        <ng-container *ngIf="itemDetails.get('price')?.hasError('required')"><p class="error">* Required field</p></ng-container>
+                    </ng-container>
+                </div>
+
+                <input class="btn" type="submit" [disabled]="!itemDetails.valid" value="Add Item">
+            </form>
+        </div>
+    </section>
+</main>

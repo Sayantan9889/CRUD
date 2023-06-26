@@ -1,0 +1,9 @@
+main {
+    background: linear-gradient(to bottom left, rgb(167, 167, 167), rgb(231, 231, 231), rgb(167, 167, 167), rgb(217, 217, 217));
+    height: 78.7vh;
+}
+
+.carousel-item img {
+    height: 71vh;
+    object-fit: contain;
+}

@@ -1,0 +1,73 @@
+main {
+    background: linear-gradient(to bottom left, rgb(176, 176, 176), rgb(244, 244, 244), rgb(176, 176, 176));
+}
+
+.regForm {
+    background: linear-gradient(to bottom right, rgb(37, 163, 252), rgb(140, 207, 255), rgb(193, 229, 255), rgb(106, 193, 255), rgb(37, 164, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 10px rgb(89, 89, 89);
+}
+
+form {
+    background-color: rgb(193, 229, 255);
+    width: 30%;
+    height: auto;
+    padding: 30px;
+    margin: 60px 0px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 10px rgb(244, 253, 255);
+
+    /* position: relative; */
+}
+
+form h3 {
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.inputField {
+    /* background-color: rgb(216, 175, 255); */
+    width: 100%;
+}
+
+.inputField label {
+    width: 100%;
+}
+
+.inputField input {
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+form .btn {
+    background-color: rgb(0, 87, 130);
+    color: white;
+    box-shadow: 1px 1px 10px 5px rgb(237, 248, 255);
+
+    /* centering */
+    position: relative;
+    left: 35%;
+    transform: translateY(10%);
+}
+
+form .btn:hover {
+    background-color: rgb(170, 232, 255);
+    color: rgb(53, 53, 53);
+    box-shadow: 1px 1px 10px 5px rgb(0, 87, 130);
+}
+
+form .btn:disabled {
+    opacity: 0.3;
+    box-shadow: 1px 1px 10px 5px rgb(126, 81, 81);
+    cursor: none;
+}
+
+.error {
+    color: red;
+    text-align: right;
+    font-size: 10px;
+}

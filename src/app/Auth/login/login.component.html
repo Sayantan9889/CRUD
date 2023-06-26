@@ -1,0 +1,26 @@
+<main>
+    <section class="container py-4">
+        <div class="regForm">
+            <form [formGroup]="logData" (ngSubmit)="logIn()">
+                <h3 id="headTxt">Log In</h3>
+
+                <div class="inputField">
+                    <label for="email">Email</label>
+                    <input type="email" formControlName="email" id="email">
+                    <ng-container *ngIf="logData.get('email')?.touched">
+                        <ng-container *ngIf="logData.get('email')?.hasError('required')"><p class="error">* Required field</p></ng-container>
+                    </ng-container>
+                </div>
+                <div class="inputField">
+                    <label for="password">Password</label>
+                    <input type="password" formControlName="password" id="password">
+                    <ng-container *ngIf="logData.get('password')?.touched">
+                        <ng-container *ngIf="logData.get('password')?.hasError('required')"><p class="error">* Required field</p></ng-container>
+                    </ng-container>
+                </div>
+
+                <input class="btn" type="submit" [disabled]="!logData.valid" value="login">
+            </form>
+        </div>
+    </section>
+</main>

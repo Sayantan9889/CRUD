@@ -1,0 +1,43 @@
+<main>
+    <section class="container py-4">
+        <div class="regForm">
+            <form [formGroup]="regData" (ngSubmit)="register()">
+                <h3 id="headTxt">Registration Form</h3>
+                <div class="inputField">
+                    <label for="first_name">First Name</label>
+                    <input type="text" formControlName="first_name" id="first_name">
+                    <ng-container *ngIf="regData.get('first_name')?.touched">
+                        <ng-container *ngIf="regData.get('first_name')?.hasError('required')"><p class="error">* Required field</p></ng-container>
+                    </ng-container>
+                </div>
+                <div class="inputField">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" formControlName="last_name" id="last_name">
+                    <ng-container *ngIf="regData.get('last_name')?.touched">
+                        <ng-container *ngIf="regData.get('last_name')?.hasError('required')"><p class="error">* Required field</p></ng-container>
+                    </ng-container>
+                </div>
+                <div class="inputField">
+                    <label for="email">Email</label>
+                    <input type="email" formControlName="email" id="email">
+                    <ng-container *ngIf="regData.get('email')?.touched">
+                        <ng-container *ngIf="regData.get('email')?.hasError('required')"><p class="error">* Required field</p></ng-container>
+                    </ng-container>
+                </div>
+                <div class="inputField">
+                    <label for="password">Password</label>
+                    <input type="password" formControlName="password" id="password">
+                    <ng-container *ngIf="regData.get('password')?.touched">
+                        <ng-container *ngIf="regData.get('password')?.hasError('required')"><p class="error">* Required field</p></ng-container>
+                    </ng-container>
+                </div>
+                <div class="inputField">
+                    <label for="profile_pic">Profile Picture</label>
+                    <input type="file" class="form-control-file" id="profile_pic" (change)="onFileSelection($event)">
+                </div>
+
+                <input class="btn" type="submit" [disabled]="!regData.valid" value="Register">
+            </form>
+        </div>
+    </section>
+</main>

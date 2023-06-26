@@ -1,0 +1,27 @@
+<main>
+    <section class="container py-4">
+        <div class="addForm">
+            <form [formGroup]="editedDetails" (ngSubmit)="editItem()">
+                <h3 id="headTxt">Fill the form to add new item</h3>
+                <div class="inputField">
+                    <label for="item_name">Item name</label>
+                    <input type="text" formControlName="item_name" id="item_name">
+                </div>
+                <div class="inputField">
+                    <label for="company">Company</label>
+                    <input type="text" formControlName="company" id="company">
+                </div>
+                <div class="inputField">
+                    <label for="desc">Description</label>
+                    <input type="text" formControlName="desc" id="desc">
+                </div>
+                <div class="inputField">
+                    <label for="price">Price</label>
+                    <input type="text" formControlName="price" id="price">
+                </div>
+
+                <input class="btn" type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+</main>
